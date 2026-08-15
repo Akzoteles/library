@@ -165,11 +165,29 @@ window.ITEMS = [
     link: "https://openlibrary.org/books/OL38090972M/Atlas_Shrugged"
   },
   {
-    title: "Template",
-    by: "Dr Placeholder McDoctorate",
+    title: "Treasure Island",
+    by: "Robert L. Stevenson",
+    cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "A nice little story. ",
+    link: "https://libraryofbabel.info/"
+  },
+  {
+    title: "The Intelligent Investor",
+    by: "Benjamin Graham",
     cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
     category: "nonfiction",
-    status: "unread",
+    status: "read",
+    note: "Here be Dragons.",
+    link: "https://libraryofbabel.info/"
+  },
+  {
+    title: "The Moon Is a Harsh Mistress",
+    by: "Robert A. Heinlein",
+    cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
+    category: "fiction",
+    status: "read",
     note: "Here be Dragons.",
     link: "https://libraryofbabel.info/"
   }

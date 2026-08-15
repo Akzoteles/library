@@ -15,7 +15,7 @@
     return;
   }
 
-  var BATCH_SIZE = 10;
+  var BATCH_SIZE = 24;
   var shelvesEl = document.getElementById("shelves");
   var sentinel = document.getElementById("sentinel");
   var endMessage = document.getElementById("end-message");
@@ -188,17 +188,57 @@
   function renderNextBatch() {
     if (nextIndex >= activeItems.length) return;
 
-    var shelf = document.createElement("section");
-    shelf.className = "shelf";
-    shelf.setAttribute("aria-label", "Shelf");
-
     var end = Math.min(nextIndex + BATCH_SIZE, activeItems.length);
+    var buttons = [];
     for (var i = nextIndex; i < end; i++) {
-      shelf.appendChild(makeItemElement(activeItems[i]));
+      buttons.push(makeItemElement(activeItems[i]));
     }
-    shelvesEl.appendChild(shelf);
     nextIndex = end;
+
+    layoutIntoShelves(buttons);
     endMessage.hidden = nextIndex < activeItems.length;
+  }
+
+  // Splits a batch of already-built item buttons into one or more
+  // shelf rows — one wooden plank per row the browser actually wraps
+  // to, rather than one plank per batch. (A single flex row can wrap
+  // onto two or more visual lines depending on screen width; without
+  // this, only the last line would end up sitting on a plank and
+  // earlier lines would look like they're floating.)
+  function layoutIntoShelves(buttons) {
+    if (buttons.length === 0) return;
+
+    // Lay everything out together first, in a hidden probe row with
+    // the exact same width/wrapping rules as a real shelf, so we can
+    // see exactly where the browser puts each line break.
+    var probe = document.createElement("section");
+    probe.className = "shelf shelf-measuring";
+    buttons.forEach(function (b) { probe.appendChild(b); });
+    shelvesEl.appendChild(probe);
+
+    var rows = [];
+    var lastBottom = null;
+    buttons.forEach(function (b) {
+      // Grouped by bottom edge, not top: with align-items:flex-end,
+      // items on the same row share a bottom edge, but can have
+      // different tops since book heights vary with width.
+      var bottom = b.offsetTop + b.offsetHeight;
+      if (lastBottom === null || Math.abs(bottom - lastBottom) > 2) {
+        rows.push([]);
+        lastBottom = bottom;
+      }
+      rows[rows.length - 1].push(b);
+    });
+
+    probe.remove();
+
+    rows.forEach(function (rowButtons) {
+      var shelf = document.createElement("section");
+      shelf.className = "shelf";
+      shelf.setAttribute("aria-label", "Shelf");
+      rowButtons.forEach(function (b) { shelf.appendChild(b); });
+      shelvesEl.appendChild(shelf);
+    });
   }
 
   // Older browsers without IntersectionObserver just get the whole
