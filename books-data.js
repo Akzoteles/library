@@ -75,13 +75,13 @@ window.ROOM_CONFIG = {
 
 window.ITEMS = [
   {
-    title: "Braiding Sweetgrass",
-    by: "Robin Wall Kimmerer",
-    cover: "https://covers.openlibrary.org/b/isbn/9781571313560-L.jpg",
-    category: "nonfiction",
-    status: "read",
-    note: "The kind of book I keep pressing into other people's hands. Slow down for this one — it rewards it.",
-    link: "https://openlibrary.org/works/OL17385117W/Braiding_Sweetgrass"
+    title: "The Hobbit",
+    by: "J.R.R. Tolkien",
+    cover: "https://covers.openlibrary.org/b/id/9261045-L.jpg",
+    category: "fiction",
+    status: "gave up",
+    note: "An interesting book, but perhaps not for me. It single handedly destroyed my reading habits. I really bounced off on the style of prose. One day I'll try lisening to the fan-made audiobook version. Maybe then I'll make it all the way though.",
+    link: "openlibrary.org/books/OL24274381M/The_Hobbit"
   },
   {
     title: "Piranesi",
