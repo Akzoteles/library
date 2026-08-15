@@ -1,0 +1,484 @@
+/* ============================================================
+   THE READING ROOM / SCREENING ROOM / GAME ROOM
+   Shared design tokens — one stylesheet, three rooms.
+   Change the colors here to re-theme the whole site at once.
+   Each room gets its own accent color via [data-room="..."]
+   further down — look there to tweak just one room's flavor.
+   ============================================================ */
+:root {
+  --color-bg: #12161f;
+  --color-bg-alt: #171d29;
+  --color-wood: #6b4429;
+  --color-wood-dark: #3c2415;
+  --color-wood-light: #8c5a34;
+  --color-accent: #c99a44;        /* books room: brass/gold */
+  --color-accent-bright: #e6c07a;
+  --color-cream: #f2e9d8;
+  --color-muted: #9c917e;
+  --color-parchment: #efe3cd;
+  --color-parchment-dim: #e3d5b8;
+  --color-ink: #241c12;
+
+  /* Status badge colors. "Active" (reading/watching/playing) always
+     matches the room's accent color, so it re-tints automatically
+     per room — see STATUS_SLOT_COLORS in app.js, which references
+     --color-accent directly rather than through this variable
+     (CSS custom properties don't "re-derive" through an indirection
+     like this across a body[data-room] override, so the direct
+     reference is what actually makes the re-tinting work). */
+  --color-status-notstarted: #55606e;
+  --color-status-done: #5f8f5a;
+  --color-status-dropped: #a15042;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shelf-radius: 3px;
+}
+
+/* Per-room accent tinting — same layout, different mood.
+   Add a new block here (and set data-room="..." on <body>) if
+   you ever add a fourth room. */
+body[data-room="watch"] {
+  --color-accent: #6fa3c9;   /* screening room: steel-blue projector glow */
+  --color-accent-bright: #9cc9e3;
+}
+
+body[data-room="play"] {
+  --color-accent: #9b7fc9;   /* game room: soft arcade violet */
+  --color-accent-bright: #c0a8e3;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 154, 68, 0.08), transparent);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  min-height: 100vh;
+  padding-bottom: 5.5rem; /* keeps content clear of the fixed filter bar */
+}
+
+/* ---------- Room switcher (fixed to the top-left of the screen) ---------- */
+#room-nav {
+  position: fixed;
+  left: 1.25rem;
+  top: 1.25rem;
+  z-index: 60;
+  display: flex;
+  gap: 0.2rem;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0.3rem;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+}
+
+.room-nav-link {
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.room-nav-link:hover { color: var(--color-cream); }
+
+.room-nav-link.is-current {
+  background: var(--color-accent);
+  color: var(--color-ink);
+  cursor: default;
+}
+
+.room-nav-link:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 0.75rem;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin: 0 0 0.75rem;
+  color: var(--color-cream);
+}
+
+.site-sub {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* ---------- Shelves ---------- */
+#shelves {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.shelf {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.4rem 1.6rem;
+  padding: 2.6rem 1rem 1.9rem;
+}
+
+/* the wooden plank each row of items stands on */
+.shelf::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.9rem;
+  height: 14px;
+  border-radius: var(--shelf-radius);
+  background: linear-gradient(180deg, var(--color-wood-light) 0%, var(--color-wood) 55%, var(--color-wood-dark) 100%);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Item (a book / show / game cover) ---------- */
+/* Class names say "book" for historical reasons, but this same
+   engine and stylesheet now renders books, shows, and games. */
+.book {
+  position: relative;
+  z-index: 1;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  aspect-ratio: 2 / 3;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow:
+    2px 0 0 rgba(0, 0, 0, 0.35),
+    3px 4px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(0) rotate(var(--book-tilt, 0deg));
+  transform-origin: bottom center;
+  transition: transform 180ms ease, box-shadow 180ms ease, outline-color 120ms ease;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.book img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Used both on the shelf (inside .book) and in the note pop-up
+   (inside .modal-cover-wrap) — sized by its own aspect ratio so it
+   looks right in either place, not just as a child of .book. */
+.book-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 2px;
+  padding: 0.9rem;
+  gap: 0.35rem;
+  background: var(--book-color, var(--color-wood));
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.book-fallback .fb-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-fallback .fb-author {
+  font-size: 0.72rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book:hover,
+.book:focus-visible {
+  transform: translateY(-10px) rotate(var(--book-tilt, 0deg));
+  box-shadow:
+    2px 0 0 rgba(0, 0, 0, 0.35),
+    4px 14px 22px rgba(0, 0, 0, 0.55),
+    0 0 0 2px var(--color-accent);
+}
+
+.book:focus-visible {
+  outline-color: var(--color-accent-bright);
+}
+
+/* ---------- Status badge (bottom-right corner of each cover) ---------- */
+.book-status {
+  position: absolute;
+  z-index: 3;
+  bottom: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 2px rgba(18, 22, 31, 0.55),
+    0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+.book-status svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ---------- End / empty messages ---------- */
+#end-message,
+#empty-message {
+  text-align: center;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  padding: 1rem 1.5rem 5rem;
+}
+
+#empty-message code {
+  font-family: monospace;
+  background: var(--color-bg-alt);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+
+/* ---------- Modal ---------- */
+#modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 17, 0.72);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 100;
+}
+
+#modal-overlay[hidden] { display: none; }
+
+#modal-card {
+  position: relative;
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  max-width: 640px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+}
+
+.modal-cover-wrap {
+  background: var(--color-parchment-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+#modal-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+#modal-cover[hidden] { display: none; }
+
+.modal-body {
+  padding: 2rem 2rem 2rem 1.5rem;
+}
+
+.modal-eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8a7a5c;
+  margin: 0 0 0.35rem;
+}
+
+#modal-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 0.7rem;
+  line-height: 1.2;
+}
+
+.status-pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1.2rem;
+}
+
+.modal-note {
+  border-top: 1px solid rgba(36, 28, 18, 0.15);
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-note-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #8a7a5c;
+  margin: 0 0 0.4rem;
+}
+
+#modal-note-text {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.checkout-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-ink);
+  color: var(--color-parchment);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.65rem 1.1rem;
+  border-radius: 4px;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.checkout-link:hover { background: #3a2d1c; transform: translateY(-1px); }
+
+#modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(36, 28, 18, 0.08);
+  color: var(--color-ink);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#modal-close:hover { background: rgba(36, 28, 18, 0.18); }
+
+/* ---------- Filter bar (fixed to the bottom of the screen) ---------- */
+#filter-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  gap: 0.2rem;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0.3rem;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+}
+
+.filter-btn {
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.filter-btn:hover { color: var(--color-cream); }
+
+.filter-btn.is-active {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 2px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .book { width: 92px !important; }
+  #modal-card { grid-template-columns: 1fr; }
+  .modal-cover-wrap { padding: 1.5rem 1.5rem 0; }
+  .modal-body { padding: 1.25rem 1.5rem 1.75rem; }
+  .site-header { padding-top: 6.5rem; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .book { transition: none; }
+  .book:hover, .book:focus-visible { transform: none; }
+  .checkout-link { transition: none; }
+}
