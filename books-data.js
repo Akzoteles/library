@@ -116,8 +116,53 @@ window.ITEMS = [
     cover: "https://covers.openlibrary.org/b/id/8260701-L.jpg",
     category: "fiction",
     status: "read",
-    note: "A very light story. It's has events realistic enough to be tragic, and unfortunate enough in their sequence to be absurd. It's a great example of a tragicomedy. It's a story of a fish out of it's water testing whether it's wise to learn to swim in other waters.",
+    note: "A very light story. It's has events realistic enough to be tragic, and unfortunate enough in their sequence to be absurd. It's a great example of a tragicomedy. It's a story of a fish out of it's water testing whether it's wise to learn to swim in others.",
     link: "https://openlibrary.org/works/OL1232213W/Cheese?edition=key%3A/books/OL3461588M"
+  },
+  {
+    title: "The Hitchhiker's Guide to the Galaxy",
+    by: "Douglas Adams",
+    cover: "https://covers.openlibrary.org/b/id/14672370-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "The first half of the book was great. The second, not so much. In some parts it points to the wonderful scale only a sci-fi can offer, in others it completely undermines it all with economic illiteracy baked into the plot. It's a surface level sci-fi comedy that (perhaps due to it's wacky ideas and plot) became baked into the cultural geist ie. associated with light sci-fi and space comedy. The book had a few interesting one-off lines, but that was the peak of it.",
+    link: "https://openlibrary.org/books/OL46566468M/Hitchhiker's_Guide_to_the_Galaxy"
+  },
+  {
+    title: "All Quiet on The Western Front",
+    by: "Erich Maria Remarque",
+    cover: "https://covers.openlibrary.org/b/id/12922315-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "No book I've read describes war in a more deserving way. The senseless slaughter, without end, goal or purpose. I can see why the National Socialists banned this book. Evil cannot deal with the honesty of reality. However the prose can only carry the story so much before the story starts giving in. The plot structure is too loose as it would befit a novel. In a way, it reads more like a collection of notes expanded into chapters than like a story with a sequentially constructed plot. Which fits well with the theme of the book but is still, in it's nature, deeply symbolic.",
+    link: "https://openlibrary.org/works/OL1209288W/Im_Westen_nichts_Neues?edition=key%3A/books/OL39806596M"
+  },
+  {
+    title: "The King in Yellow",
+    by: "Robert W. Chambers",
+    cover: "https://covers.openlibrary.org/b/id/6293665-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "This book is such a 'malevolent/arbitrary universe' that it (perhaps to it's own detriment) loops back on itself and establishes (in it's own cosmology) an 'non-arbitrary universe'. Perhaps it's the result of being the most consistent 'malevolent/arbitrary universe' story? I don't know. What I know is that it's an evil story that at best shows the cognitive weakness to understand the world of some and at worse attempts to establish a cosmology where knowledge is inherently cancerous. This story is the furthest I'll go into the genre of 'Lovecraftian Horror'.",
+    link: "https://openlibrary.org/works/OL8127201W/The_King_in_Yellow"
+  },
+  {
+    title: "Starship Troopers",
+    by: "Robert A. Heinlein",
+    cover: "https://covers.openlibrary.org/b/id/8745305-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "It's a coming of age story in a sci-fi future society. It's an interesting story. It has a few philosophical remarks neatly baked into the context of the story itself, the most notable are those on 'Objective Economic Value' and 'Democracy'. All in all, it's not a structurally bad story.",
+    link: "https://openlibrary.org/books/OL27241981M/Starship_Troopers"
+  },
+  {
+    title: "Atlas Shrugged",
+    by: "Ayn Rand",
+    cover: "https://covers.openlibrary.org/b/id/14688986-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "This was an interesting book. The style of the prose was deeply beautiful. Though, I wouldn't call it the author 'Magnum Opus', I think The Fountainhead still takes that place. Despite the beautiful style and prose, the structure of story is overall symbolic. There are structural flaws that the story suffers from, such as the lack of buildup to some later plot points. However if we treat this novel as being symbolic of the author's wider philosophy, then I'd say it roughly succeeds in giving a rough introduction to the Philosophy of Objectivism.",
+    link: "https://openlibrary.org/books/OL38090972M/Atlas_Shrugged"
   },
   {
     title: "Template",
@@ -125,7 +170,7 @@ window.ITEMS = [
     cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
     category: "nonfiction",
     status: "unread",
-    note: "Blank.",
+    note: "Here be Dragons.",
     link: "https://libraryofbabel.info/"
   }
 ];
