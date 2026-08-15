@@ -167,28 +167,29 @@ window.ITEMS = [
   {
     title: "Treasure Island",
     by: "Robert L. Stevenson",
-    cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
+    cover: "https://covers.openlibrary.org/b/id/12621820-L.jpg",
     category: "fiction",
     status: "read",
-    note: "A nice little story. ",
-    link: "https://libraryofbabel.info/"
+    note: "A nice little story. It's a shame I didn't encounter it sooner. It's a well written adventure story.",
+    link: "https://openlibrary.org/books/OL37044554M/Treasure_Island"
   },
   {
     title: "The Intelligent Investor",
     by: "Benjamin Graham",
-    cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
+    cover: "https://covers.openlibrary.org/b/id/10826961-L.jpg",
     category: "nonfiction",
     status: "read",
-    note: "Here be Dragons.",
-    link: "https://libraryofbabel.info/"
+    note: "I was recommended this book by a friend who was very much into these things. I did write down a lot of notes on this one. Looking now at those notes, they really come of as more of a psychological preparation rather than being rough advice of 'Just do X, Y and Z'. Perhaps it's akin to 'Art of war' but for investors? I don't know. I wonder if I'll ever use those notes.",
+    link: "https://openlibrary.org/books/OL9233249M/The_Intelligent_Investor"
   },
   {
     title: "The Moon Is a Harsh Mistress",
     by: "Robert A. Heinlein",
-    cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
+    cover: "https://covers.openlibrary.org/b/id/8566041-L.jpg",
     category: "fiction",
     status: "read",
-    note: "Here be Dragons.",
-    link: "https://libraryofbabel.info/"
+    note: "The grammar initially put me off, I was not a fan of that. In general, it's a interesting story. Roughly around the lines of 'American Revolution in Space!'. I wasn't really satisfied with how the author dealt with one of main characters at the end, but it was an interesting book overall. Logistics and 'How to' of everything done is always interesting to read about when it's presented properly.",
+    link: "https://openlibrary.org/books/OL26870042M/The_Moon_Is_a_Harsh_Mistress"
   }
+
 ];
