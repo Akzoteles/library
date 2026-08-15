@@ -183,6 +183,15 @@ window.ITEMS = [
     link: "https://openlibrary.org/books/OL9233249M/The_Intelligent_Investor"
   },
   {
+    title: "The Collected Poems of William Wordsworth",
+    by: "William Wordsworth",
+    cover: "https://covers.openlibrary.org/b/id/8843338-L.jpg",
+    category: "fiction",
+    status: "gave up",
+    note: "Sometimes it's stylistically wonderful, but more often than that's undermined by it's content. There are noteful exceptions. Here are few I've encountered: 'To a Butterfly' (I will add more as I read more through).",
+    link: "https://openlibrary.org/works/OL20193498W/The_Collected_Poems_of_William_Wordsworth?edition=key%3A/books/OL27380078M"
+  },
+  {
     title: "The Moon Is a Harsh Mistress",
     by: "Robert A. Heinlein",
     cover: "https://covers.openlibrary.org/b/id/8566041-L.jpg",
@@ -190,6 +199,15 @@ window.ITEMS = [
     status: "read",
     note: "The grammar initially put me off, I was not a fan of that. In general, it's a interesting story. Roughly around the lines of 'American Revolution in Space!'. I wasn't really satisfied with how the author dealt with one of main characters at the end, but it was an interesting book overall. Logistics and 'How to' of everything done is always interesting to read about when it's presented properly.",
     link: "https://openlibrary.org/books/OL26870042M/The_Moon_Is_a_Harsh_Mistress"
+  },
+  {
+    title: "The Early Ayn Rand",
+    by: "Ayn Rand",
+    cover: "https://covers.openlibrary.org/b/id/293615-L.jpg",
+    category: "fiction",
+    status: "reading",
+    note: "Currently Reading.",
+    link: "https://openlibrary.org/books/OL7574649M/The_Early_Ayn_Rand_Revised_Edition"
   }
 
 ];
