@@ -81,40 +81,51 @@ window.ITEMS = [
     category: "fiction",
     status: "gave up",
     note: "An interesting book, but perhaps not for me. It single handedly destroyed my reading habits. I really bounced off on the style of prose. One day I'll try lisening to the fan-made audiobook version. Maybe then I'll make it all the way though.",
-    link: "openlibrary.org/books/OL24274381M/The_Hobbit"
+    link: "https://openlibrary.org/books/OL10236414M/The_Hobbit"
   },
   {
-    title: "Piranesi",
-    by: "Susanna Clarke",
-    cover: "https://covers.openlibrary.org/b/isbn/9781635575637-L.jpg",
+    title: "Hamlet",
+    by: "William Shakespeare",
+    cover: "https://covers.openlibrary.org/b/id/12337338-L.jpg",
     category: "fiction",
     status: "read",
-    note: "Read it in two sittings. Strange and gentle at once — I still think about the House.",
-    link: "https://openlibrary.org/works/OL19952542W/Piranesi"
+    note: "Despite the noteful lines of 'To be or not to be.' and 'To thine own self be true' I don't remember much. The reast wasn't particularly memorable.",
+    link: "https://openlibrary.org/books/OL35630367M/Hamlet"
   },
   {
-    title: "The Overstory",
-    by: "Richard Powers",
-    cover: "https://covers.openlibrary.org/b/isbn/9780393635522-L.jpg",
-    category: "fiction",
-    status: "reading",
-    note: "Long, ambitious, occasionally sprawling — but it's already changed how I look at trees.",
-    link: "https://openlibrary.org/works/OL19073059W/The_Overstory"
-  },
-  {
-    title: "A Book With No Cover Image",
-    by: "Example Author",
-    status: "unread",
-    note: "This entry has no 'cover' line at all, so you can see what the fallback look is. Delete this example whenever.",
-    link: "https://example.com"
-  },
-  {
-    title: "Consider the Lobster",
-    by: "David Foster Wallace",
-    cover: "https://covers.openlibrary.org/b/isbn/9780316013321-L.jpg",
+    title: "The Anti-Capitalistic Mentality",
+    by: "Ludwig von Mises",
+    cover: "https://covers.openlibrary.org/b/id/12371439-L.jpg",
     category: "nonfiction",
-    status: "gave up",
-    note: "Uneven as a collection. Put it down after three essays — might pick it back up someday.",
-    link: "https://openlibrary.org/works/OL5731906W/Consider_the_Lobster"
+    status: "read",
+    note: "One of the few nonfictions I've read. I haven't kept any notes while reading it so I have litteraly forgotten everything.",
+    link: "https://openlibrary.org/works/OL21785579W/Anti-Capitalistic_Mentality?edition=key%3A/books/OL35666643M"
+  },
+  {
+    title: "The Fountainhead",
+    by: "Ayn Rand",
+    cover: "https://covers.openlibrary.org/b/id/14813176-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "My favourite novel. The whole story structure, it's theme and every character converge into a single inevitable end. All is there for a story, the single premise novel presents wonderfully. A single story equally for both an inventor, an artist and a philosopher,",
+    link: "https://openlibrary.org/books/OL20701851M/The_fountainhead"
+  },
+  {
+    title: "Cheese",
+    by: "Willem Elsschot",
+    cover: "https://covers.openlibrary.org/b/id/8260701-L.jpg",
+    category: "fiction",
+    status: "read",
+    note: "A very light story. It's has events realistic enough to be tragic, and unfortunate enough in their sequence to be absurd. It's a great example of a tragicomedy. It's a story of a fish out of it's water testing whether it's wise to learn to swim in other waters.",
+    link: "https://openlibrary.org/works/OL1232213W/Cheese?edition=key%3A/books/OL3461588M"
+  },
+  {
+    title: "Template",
+    by: "Dr Placeholder McDoctorate",
+    cover: "https://covers.openlibrary.org/b/id/810139-L.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Blank.",
+    link: "https://libraryofbabel.info/"
   }
 ];
