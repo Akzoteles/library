@@ -295,10 +295,64 @@ window.ITEMS = [
   {
     title: "Julius Caesar",
     by: "William Shakespeare",
-    cover: "https://m.media-amazon.com/images/I/71U15NGKojL._SL1076_.jpg",
+    cover: "https://m.media-amazon.com/images/I/81sNr8bZWpL._SL1500_.jpg",
     category: "fiction",
     status: "unread",
     note: "Waiting to be read.",
     link: "https://openlibrary.org/books/OL8064172M/Julius_Ceaser"
+  },
+  {
+    title: "Les Miserables",
+    by: "Victor Hugo",
+    cover: "https://m.media-amazon.com/images/I/81auD7Lpj4L._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL1063588W/Les_Mis%C3%A9rables?edition=key%3A/books/OL24626461M"
+  },
+  {
+    title: "Ninety-Three",
+    by: "Victor Hugo",
+    cover: "https://m.media-amazon.com/images/I/81xYr6UlfXL._SL1360_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL15202029W/Quatrevingt-treize?edition=key%3A/books/OL6980866M"
+  },
+  {
+    title: "Ninety-Three",
+    by: "Victor Hugo",
+    cover: "https://m.media-amazon.com/images/I/81xYr6UlfXL._SL1360_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL15202029W/Quatrevingt-treize?edition=key%3A/books/OL6980866M"
+  },
+  {
+    title: "The Count of Monte Cristo",
+    by: "Alexandre Dumas",
+    cover: "https://m.media-amazon.com/images/I/811iBn28JdL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL43161739W/The_Count_of_Monte_Cristo?edition=key%3A/books/OL58783727M"
+  },
+  {
+    title: "The Agony and the Ecstasy: A Biographical Novel of Michelangelo",
+    by: "Irving Stone",
+    cover: "https://m.media-amazon.com/images/I/71IG3TVEt6L._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL22599813M/The_agony_and_the_ecstasy"
+  },
+  {
+    title: "Ivanhoe",
+    by: "Sir Walter Scott",
+    cover: "https://m.media-amazon.com/images/I/91fXGwCYAJL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL863808W/Ivanhoe?edition=key%3A/books/OL24129159M"
   }
 ];
