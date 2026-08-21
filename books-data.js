@@ -91,7 +91,7 @@ window.ITEMS = [
     cover: "https://covers.openlibrary.org/b/id/12337338-L.jpg",
     category: "fiction",
     status: "read",
-    note: "Despite the noteful lines of 'To be or not to be.' and 'To thine own self be true' I don't remember much. The reast wasn't particularly memorable.",
+    note: "Despite the noteful lines of 'To be or not to be.' and 'To thine own self be true' I don't remember much. The rest wasn't particularly memorable.",
     link: "https://openlibrary.org/books/OL35630367M/Hamlet"
   },
   {
