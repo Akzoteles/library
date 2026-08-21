@@ -210,6 +210,23 @@ window.ITEMS = [
     status: "reading",
     note: "Currently Reading.",
     link: "https://openlibrary.org/books/OL7574649M/The_Early_Ayn_Rand_Revised_Edition"
+  },
+  {
+    title: "Fellowship of the ring",
+    by: "J.R.R. Tolkien",
+    cover: "https://covers.openlibrary.org/b/id/14656497-L.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL51097690M/Fellowship_of_the_Ring_Collector's_Edition"
+  },
+  {
+    title: "The Two Towers",
+    by: "J.R.R. Tolkien",
+    cover: "https://m.media-amazon.com/images/I/81HfbQ8F2UL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL51123649M/Two_Towers_Collector's_Edition"
   }
-
 ];
