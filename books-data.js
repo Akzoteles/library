@@ -189,7 +189,7 @@ window.ITEMS = [
     by: "William Wordsworth",
     cover: "https://covers.openlibrary.org/b/id/8843338-L.jpg",
     category: "fiction",
-    status: "gave up",
+    status: "skimming",
     note: "Sometimes it's stylistically wonderful, but more often than that's undermined by it's content. There are noteful exceptions. Here are few I've encountered: 'To a Butterfly' (I will add more as I read more through).",
     link: "https://openlibrary.org/works/OL20193498W/The_Collected_Poems_of_William_Wordsworth?edition=key%3A/books/OL27380078M"
   },
