@@ -88,7 +88,7 @@ window.ITEMS = [
   {
     title: "Hamlet",
     by: "William Shakespeare",
-    cover: "cdna.artstation.com/p/assets/images/images/070/609/750/large/rubens-muller-hamlet-1-final.jpg",
+    cover: "https://i.pinimg.com/1200x/7b/1b/f3/7b1bf3b8a1b933b750f16fa461140660.jpg",
     category: "fiction",
     status: "read",
     note: "Despite the noteful lines of 'To be or not to be.' and 'To thine own self be true' I don't remember much. The rest wasn't particularly memorable.",
@@ -97,7 +97,7 @@ window.ITEMS = [
   {
     title: "The Anti-Capitalistic Mentality",
     by: "Ludwig von Mises",
-    cover: "https://covers.openlibrary.org/b/id/12371439-L.jpg",
+    cover: "https://m.media-amazon.com/images/I/61NmAMh2TKL._SL1360_.jpg",
     category: "nonfiction",
     status: "read",
     note: "One of the few nonfictions I've read. I haven't kept any notes while reading it so I have litteraly forgotten everything.",
