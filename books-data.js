@@ -320,15 +320,6 @@ window.ITEMS = [
     link: "https://openlibrary.org/works/OL15202029W/Quatrevingt-treize?edition=key%3A/books/OL6980866M"
   },
   {
-    title: "Ninety-Three",
-    by: "Victor Hugo",
-    cover: "https://m.media-amazon.com/images/I/81xYr6UlfXL._SL1360_.jpg",
-    category: "fiction",
-    status: "unread",
-    note: "Waiting to be read.",
-    link: "https://openlibrary.org/works/OL15202029W/Quatrevingt-treize?edition=key%3A/books/OL6980866M"
-  },
-  {
     title: "The Count of Monte Cristo",
     by: "Alexandre Dumas",
     cover: "https://m.media-amazon.com/images/I/811iBn28JdL._SL1500_.jpg",
