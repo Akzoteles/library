@@ -29,6 +29,7 @@
   --color-status-notstarted: #55606e;
   --color-status-done: #5f8f5a;
   --color-status-dropped: #a15042;
+  --color-status-skim: #5c7a9e;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -166,6 +167,14 @@ body {
   box-shadow:
     0 6px 14px rgba(0, 0, 0, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Used for a split second to measure where the browser wraps a
+   batch of items onto new lines (see layoutIntoShelves in app.js).
+   Never meant to be seen — hidden as a safety net in case anything
+   ever paints mid-measurement. */
+.shelf-measuring {
+  visibility: hidden;
 }
 
 /* ---------- Item (a book / show / game cover) ---------- */

@@ -27,6 +27,8 @@ window.ROOM_CONFIG = {
       aliases: ["reading", "currently reading", "in progress"] },
     { key: "read", label: "Read", icon: "check",
       aliases: ["read", "finished", "done"] },
+    { key: "skimming", label: "Skimming Through", icon: "skim",
+      aliases: ["skimming", "skimming through", "skim"] },
     { key: "gave-up", label: "Gave up", icon: "x",
       aliases: ["gave up", "gave-up", "dnf", "did not finish", "abandoned"] }
   ]

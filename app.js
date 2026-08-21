@@ -49,12 +49,14 @@
     bookmark: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>',
     play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>',
     check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,13 9,18 20,6"/></svg>',
-    x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>'
+    x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>',
+    skim: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5,5 12,12 5,19"/><polyline points="13,5 20,12 13,19"/></svg>'
   };
 
   // Positional status colors: 1st status in a room's config is
   // always "not started," 2nd is "active" (tinted to the room's
-  // accent color), 3rd is "done," 4th is "dropped."
+  // accent color), 3rd is "done," 4th is "dropped," 5th (if a room
+  // adds one) is "skim."
   //
   // The 2nd slot references --color-accent directly (not through
   // an intermediate --color-status-active variable) because CSS
@@ -66,11 +68,13 @@
     "var(--color-status-notstarted)",
     "var(--color-accent)",
     "var(--color-status-done)",
-    "var(--color-status-dropped)"
+    "var(--color-status-dropped)",
+    "var(--color-status-skim)"
   ];
   var STATUS_SLOT_ICON_COLORS = [
     "var(--color-cream)",
     "var(--color-ink)",
+    "var(--color-cream)",
     "var(--color-cream)",
     "var(--color-cream)"
   ];
