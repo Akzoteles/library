@@ -237,5 +237,50 @@ window.ITEMS = [
     status: "unread",
     note: "Waiting to be read.",
     link: "https://openlibrary.org/works/OL27455W/The_Return_of_the_King"
+  },
+  {
+    title: "A Game of Thrones",
+    by: "G.R.R. Martin",
+    cover: "https://m.media-amazon.com/images/I/81FWVQqXf-L._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL257943W/A_Game_of_Thrones?edition=bwb_KU-426-196"
+  },
+  {
+    title: "A Clash of Kings",
+    by: "G.R.R. Martin",
+    cover: "https://m.media-amazon.com/images/I/91SdD9W2dbL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL257939W/A_Clash_of_Kings?edition=key%3A/books/OL58635088M"
+  },
+  {
+    title: "A Storm of Swords",
+    by: "G.R.R. Martin",
+    cover: "https://m.media-amazon.com/images/I/81uTAITryrL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL257914W?edition=trochivngquyen3b0000mart"
+  },
+  {
+    title: "A Feast for Crows",
+    by: "G.R.R. Martin",
+    cover: "https://m.media-amazon.com/images/I/81Bvv13fIhL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL257948W/A_Feast_for_Crows?edition=key%3A/books/OL60291429M"
+  },
+  {
+    title: "A Dance with Dragons",
+    by: "G.R.R. Martin",
+    cover: "https://m.media-amazon.com/images/I/81D0548kQbL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL60288751M/A_Dance_With_Dragons"
   }
 ];
