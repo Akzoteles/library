@@ -79,7 +79,7 @@ window.ITEMS = [
   {
     title: "The Hobbit",
     by: "J.R.R. Tolkien",
-    cover: "https://covers.openlibrary.org/b/id/9261045-L.jpg",
+    cover: "https://m.media-amazon.com/images/I/71OF35MLUEL._UF1000,1000_QL80_AIweblab1381794,T1_.jpg",
     category: "fiction",
     status: "gave up",
     note: "An interesting book, but perhaps not for me. It single handedly destroyed my reading habits. I really bounced off on the style of prose. One day I'll try lisening to the fan-made audiobook version. Maybe then I'll make it all the way though.",
@@ -88,7 +88,7 @@ window.ITEMS = [
   {
     title: "Hamlet",
     by: "William Shakespeare",
-    cover: "https://covers.openlibrary.org/b/id/12337338-L.jpg",
+    cover: "cdna.artstation.com/p/assets/images/images/070/609/750/large/rubens-muller-hamlet-1-final.jpg",
     category: "fiction",
     status: "read",
     note: "Despite the noteful lines of 'To be or not to be.' and 'To thine own self be true' I don't remember much. The rest wasn't particularly memorable.",
