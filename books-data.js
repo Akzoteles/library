@@ -495,8 +495,8 @@ window.ITEMS = [
     by: "Leonard Peikoff",
     cover: "https://m.media-amazon.com/images/I/61JIQ-+Vo5L._SL1199_.jpg",
     category: "nonfiction",
-    status: "unread",
-    note: "Waiting to be read.",
+    status: "skimming",
+    note: "Preparing myself for a deep dive.",
     link: "https://openlibrary.org/books/OL2025851M"
   }
 ];
