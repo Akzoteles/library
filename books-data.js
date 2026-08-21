@@ -282,5 +282,23 @@ window.ITEMS = [
     status: "unread",
     note: "Waiting to be read.",
     link: "https://openlibrary.org/books/OL60288751M/A_Dance_With_Dragons"
+  },
+  {
+    title: "The Idiot",
+    by: "Fyodor Dostoevsky",
+    cover: "https://m.media-amazon.com/images/I/81GpBL+tl0L._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL166925W/%D0%98%D0%B4%D0%B8%D0%BE%D1%82?edition=key%3A/books/OL6974856M"
+  },
+  {
+    title: "Julius Caesar",
+    by: "William Shakespeare",
+    cover: "https://m.media-amazon.com/images/I/71U15NGKojL._SL1076_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL8064172M/Julius_Ceaser"
   }
 ];
