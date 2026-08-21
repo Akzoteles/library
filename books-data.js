@@ -381,5 +381,122 @@ window.ITEMS = [
     status: "read",
     note: "Good book. Made a lot of notes. Haven't chewed through it though.",
     link: "https://openlibrary.org/works/OL17930368W/Atomic_Habits?edition=key%3A/books/OL27918581M"
+  },
+  {
+    title: "A Culture of Growth: The Origins of the Modern Economy",
+    by: "Joel Mokyr",
+    cover: "https://m.media-amazon.com/images/I/91sTpGRXWaL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL17838612W/A_Culture_of_Growth?edition=key%3A/books/OL29317632M"
+  },
+  {
+    title: "The Bitcoin Standard: The Decentralized Alternative to Central Banking",
+    by: "Saifedean Ammous",
+    cover: "https://m.media-amazon.com/images/I/71jDLpPMdFS._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "openlibrary.org/books/OL29362957M"
+  },
+  {
+    title: "The Road to Serfdom",
+    by: "F. A. Hayek",
+    cover: "https://m.media-amazon.com/images/I/61QemkTttrL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL17626547M"
+  },
+  {
+    title: "Metaphysics",
+    by: "Aristotle",
+    cover: "https://m.media-amazon.com/images/I/71QiqAo2YKL._SL1360_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL24382348M"
+  },
+  {
+    title: "The Nicomachean Ethics",
+    by: "Aristotle",
+    cover: "https://m.media-amazon.com/images/I/816IBmZZX9L._SL1500_.jpg",
+    category: "nonfiction",
+    status: "skimming",
+    note: "Preparing myself for a deep dive.",
+    link: "https://openlibrary.org/works/OL8273964W/Nicomachean_Ethics?edition=key%3A/books/OL7135598M"
+  },
+  {
+    title: "Poetics",
+    by: "Aristotle",
+    cover: "https://m.media-amazon.com/images/I/61bI8PU6MtL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "skimming",
+    note: "Preparing myself for a deep dive.",
+    link: "openlibrary.org/books/OL7114335M"
+  },
+  {
+    title: "Posterior Analytics",
+    by: "Aristotle",
+    cover: "https://m.media-amazon.com/images/I/619DpGmOJkL._SL1400_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "openlibrary.org/books/OL3792321M"
+  },
+  {
+    title: "Aristotle: Selected Works",
+    by: "Aristotle",
+    cover: "https://m.media-amazon.com/images/I/81V6tFI6SQL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "skimming",
+    note: "Preparing myself for a deep dive.",
+    link: "openlibrary.org/books/OL7026706M"
+  },
+  {
+    title: "Philosophy: Who Needs It",
+    by: "Ayn Rand",
+    cover: "https://m.media-amazon.com/images/I/71Kdzn2aoAL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL3484818M"
+  },
+  {
+    title: "The Romantic Manifesto",
+    by: "Ayn Rand",
+    cover: "https://m.media-amazon.com/images/I/7156A0aPpnL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL7572209M"
+  },
+  {
+    title: "The Virtue of Selfishness",
+    by: "Ayn Rand",
+    cover: "https://m.media-amazon.com/images/I/713KwoV90PL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL8106017M"
+  },
+  {
+    title: "The Six Pillars of Self-Esteem",
+    by: "Nathaniel Branden",
+    cover: "https://m.media-amazon.com/images/I/91+wmi0G1VL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL22854631M"
+  },
+  {
+    title: "Objectivism: The Philosophy of Ayn Rand",
+    by: "Leonard Peikoff",
+    cover: "https://m.media-amazon.com/images/I/61JIQ-+Vo5L._SL1199_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/books/OL2025851M"
   }
 ];
