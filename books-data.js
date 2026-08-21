@@ -345,5 +345,41 @@ window.ITEMS = [
     status: "unread",
     note: "Waiting to be read.",
     link: "https://openlibrary.org/works/OL863808W/Ivanhoe?edition=key%3A/books/OL24129159M"
+  },
+  {
+    title: "We the Living",
+    by: "Ayn Rand",
+    cover: "https://m.media-amazon.com/images/I/81Ga2WRIyKL._SL1500_.jpg",
+    category: "fiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL731732W/We_the_living?edition=key%3A/books/OL32153396M"
+  },
+  {
+    title: "Story",
+    by: "Robert McKee",
+    cover: "https://m.media-amazon.com/images/I/61ZDPQGURZL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "skimming",
+    note: "Preparing myself for a deep dive.",
+    link: "https://openlibrary.org/works/OL273896W/Story?edition=key%3A/books/OL677814M"
+  },
+  {
+    title: "Hero's Journey: Joseph Campbell on His Life and Work",
+    by: "Joseph Campbell",
+    cover: "https://m.media-amazon.com/images/I/81acCfTc-yL._SL1500_.jpg",
+    category: "nonfiction",
+    status: "unread",
+    note: "Waiting to be read.",
+    link: "https://openlibrary.org/works/OL2497167W/The_hero's_journey?edition=key%3A/books/OL3687029M"
+  },
+  {
+    title: "Atomic Habits",
+    by: "James Clear",
+    cover: "https://m.media-amazon.com/images/I/81kg51XRc1L._SL1500_.jpg",
+    category: "nonfiction",
+    status: "read",
+    note: "Good book. Made a lot of notes. Haven't chewed through it though.",
+    link: "https://openlibrary.org/works/OL17930368W/Atomic_Habits?edition=key%3A/books/OL27918581M"
   }
 ];
